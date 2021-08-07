@@ -5,9 +5,9 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["Services/AKS_Sample.Services.GreetService/AKS_Sample.Services.GreetService.csproj", "AKS_Sample.Services.GreetService/"]
-RUN dotnet restore "Services/AKS_Sample.Services.GreetService/AKS_Sample.Services.GreetService.csproj"
-COPY . .
+COPY ["AKS_Sample.Services.GreetService.csproj", "AKS_Sample.Services.GreetService/"]
+RUN dotnet restore "AKS_Sample.Services.GreetService/AKS_Sample.Services.GreetService.csproj"
+COPY . "AKS_Sample.Services.GreetService/"
 WORKDIR "/src/AKS_Sample.Services.GreetService"
 RUN dotnet build "AKS_Sample.Services.GreetService.csproj" -c Release -o /app/build
 
