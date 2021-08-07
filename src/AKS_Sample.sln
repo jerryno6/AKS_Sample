@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{84D1E1DA-34B0-45A9-A6D4-9AE0E164A7FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{66CFD4E4-7476-4890-A736-1169DBE0266E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKS_Sample.Services.GreetService", "Services\AKS_Sample.Services.GreetService\AKS_Sample.Services.GreetService.csproj", "{D5728DB0-1B54-43AD-B27E-BF435EDDA7C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKS_Sample.Client.Console", "Clients\AKS_Sample.Client.Console\AKS_Sample.Client.Console.csproj", "{75C7AF67-BF3A-4F60-A2FB-6758B5C45801}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5728DB0-1B54-43AD-B27E-BF435EDDA7C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5728DB0-1B54-43AD-B27E-BF435EDDA7C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5728DB0-1B54-43AD-B27E-BF435EDDA7C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5728DB0-1B54-43AD-B27E-BF435EDDA7C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C7AF67-BF3A-4F60-A2FB-6758B5C45801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C7AF67-BF3A-4F60-A2FB-6758B5C45801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C7AF67-BF3A-4F60-A2FB-6758B5C45801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C7AF67-BF3A-4F60-A2FB-6758B5C45801}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D5728DB0-1B54-43AD-B27E-BF435EDDA7C7} = {84D1E1DA-34B0-45A9-A6D4-9AE0E164A7FB}
+		{75C7AF67-BF3A-4F60-A2FB-6758B5C45801} = {66CFD4E4-7476-4890-A736-1169DBE0266E}
+	EndGlobalSection
+EndGlobal
