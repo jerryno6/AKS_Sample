@@ -13,7 +13,7 @@ docker run -d -p 35960:35960 --name greet ledangvu/ledangvu_aks_grpc:0.1
 ```
 docker build -t ledangvu/ledangvu_aks_webapi:latest .
 
-docker run -d -p 35960:35960 --name greet ledangvu/ledangvu_aks_webapi:latest
+docker run -d -p 80:80 --name greet ledangvu/ledangvu_aks_webapi:latest
 ```
 
 # Run without SSL:
