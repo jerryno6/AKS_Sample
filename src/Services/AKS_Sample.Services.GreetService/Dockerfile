@@ -1,11 +1,7 @@
 ﻿FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
-# EXPOSE 80
-# EXPOSE 443
-EXPOSE 35960
-# EXPOSE 35961
-ENV ASPNETCORE_URLS=http://*:35960
-# ENV ASPNETCORE_URLS=http://+:35960;https://+:35961
+EXPOSE 80
+EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
