@@ -2,10 +2,18 @@
 - You need to have docker cli installed on your machine to run.
 - Run builddocker.sh to build or run these command below
 
+### Build for grpc manually
 ```
 docker build -t ledangvu/ledangvu_aks_grpc:0.1 .
 
 docker run -d -p 35960:35960 --name greet ledangvu/ledangvu_aks_grpc:0.1
+```
+
+### Build for webapi manualy
+```
+docker build -t ledangvu/ledangvu_aks_webapi:latest .
+
+docker run -d -p 35960:35960 --name greet ledangvu/ledangvu_aks_webapi:latest
 ```
 
 # Run without SSL:
