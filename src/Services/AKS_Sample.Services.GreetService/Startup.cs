@@ -18,6 +18,8 @@ namespace AKS_Sample.Services.GreetService
         {
             services.AddGrpc();
             
+            services.AddHealthChecks();
+            
             services.AddCors(o => o.AddPolicy("AllowAll", builder =>
             {
                 builder.AllowAnyOrigin()
@@ -45,6 +47,8 @@ namespace AKS_Sample.Services.GreetService
             {
                 endpoints.MapGrpcService<GreeterService>().EnableGrpcWeb().RequireCors("AllowAll");
 
+                endpoints.MapHealthChecks("/health");
+                
                 endpoints.MapGet("/",
                     async context =>
                     {
