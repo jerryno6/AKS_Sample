@@ -26,8 +26,8 @@ namespace WebApi
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-
 			services.AddControllers();
+			services.AddHealthChecks();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,10 +47,12 @@ namespace WebApi
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllers();
-
+				
+				endpoints.MapHealthChecks("/health");
+				
 				endpoints.MapGet("/", async context =>
 				{
-					await context.Response.WriteAsync("It works !");
+					await context.Response.WriteAsync("It works ! V01");
 				});
 			});
 		}
