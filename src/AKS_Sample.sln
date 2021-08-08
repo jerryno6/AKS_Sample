@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKS_Sample.Services.GreetSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKS_Sample.Client.Console", "Clients\AKS_Sample.Client.Console\AKS_Sample.Client.Console.csproj", "{75C7AF67-BF3A-4F60-A2FB-6758B5C45801}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "Services\WebApi\WebApi.csproj", "{FF9C3447-EA75-43A9-839E-0ECC055D28AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,9 +25,14 @@ Global
 		{75C7AF67-BF3A-4F60-A2FB-6758B5C45801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75C7AF67-BF3A-4F60-A2FB-6758B5C45801}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75C7AF67-BF3A-4F60-A2FB-6758B5C45801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF9C3447-EA75-43A9-839E-0ECC055D28AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9C3447-EA75-43A9-839E-0ECC055D28AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9C3447-EA75-43A9-839E-0ECC055D28AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9C3447-EA75-43A9-839E-0ECC055D28AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D5728DB0-1B54-43AD-B27E-BF435EDDA7C7} = {84D1E1DA-34B0-45A9-A6D4-9AE0E164A7FB}
 		{75C7AF67-BF3A-4F60-A2FB-6758B5C45801} = {66CFD4E4-7476-4890-A736-1169DBE0266E}
+		{FF9C3447-EA75-43A9-839E-0ECC055D28AE} = {84D1E1DA-34B0-45A9-A6D4-9AE0E164A7FB}
 	EndGlobalSection
 EndGlobal
