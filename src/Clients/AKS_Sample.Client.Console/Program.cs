@@ -12,15 +12,15 @@ namespace AKS_Sample.Client.Console
         {
             try
             {
-                var serverAddress = "https://localhost:35960";
+                var serverAddress = "https://localhost";
 
-#if DEBUG
+#if abc
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                 {
                     // The following statement allows you to call insecure services. To be used only in development environments.
                     AppContext.SetSwitch(
                         "System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-                    serverAddress = "http://localhost:35960";
+                    serverAddress = "http://localhost";
                 }
 #endif
 
@@ -34,7 +34,7 @@ namespace AKS_Sample.Client.Console
             }
             catch (Exception ex)
             {
-                System.Console.WriteLine(ex.ToString());
+                System.Console.WriteLine(ex.Message);
             }
 
         }
