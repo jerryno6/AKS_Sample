@@ -52,7 +52,7 @@ namespace WebApi
 				
 				endpoints.MapGet("/", async context =>
 				{
-					await context.Response.WriteAsync("It works ! V01");
+					await context.Response.WriteAsync("WebApi works! V01");
 				});
 			});
 		}
