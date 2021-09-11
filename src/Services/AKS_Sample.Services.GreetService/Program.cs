@@ -27,7 +27,7 @@ namespace AKS_Sample.Services.GreetService
                     //todo: If you want to config for certificate in production. 
                     // webBuilder.ConfigureKestrel(options =>
                     // {
-                    // 	options.Listen(IPAddress.Any, 35960, listenOptions =>
+                    // 	options.Listen(IPAddress.Any, 7001, listenOptions =>
                     // 	{
                     // 		listenOptions.Protocols = HttpProtocols.Http2;
                     // 		// listenOptions.UseHttps("<path to .pfx file>", "<certificate password>");
@@ -42,7 +42,7 @@ namespace AKS_Sample.Services.GreetService
                         webBuilder.ConfigureKestrel(options =>
                         {
                             // Setup a HTTP/2 endpoint without TLS.
-                            options.ListenLocalhost(35960, listenOptions =>
+                            options.ListenLocalhost(7001, listenOptions =>
                             {
                                 listenOptions.Protocols = HttpProtocols.Http2;
                                 // listenOptions.UseHttps("<path to .pfx file>", "<certificate password>");
