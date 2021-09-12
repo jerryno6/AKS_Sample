@@ -1,5 +1,5 @@
-export LOCATION=southeastasia
-export RESOURCE_GROUP=learn-04de4d4b-8b6e-49d4-b2f5-cf29151abeff
+#export LOCATION=southeastasia
+export RESOURCE_GROUP=learn-aa6abe3a-67e1-458a-95fd-2114f0163d62
 export CLUSTER_NAME=aks-contoso-video
 
 #create resources
@@ -8,7 +8,7 @@ export CLUSTER_NAME=aks-contoso-video
 az aks create \
     --resource-group $RESOURCE_GROUP \
     --name $CLUSTER_NAME \
-    --node-count 2 \
+    --node-count 1 \
     --enable-addons http_application_routing \
     --generate-ssh-keys \
     --node-vm-size Standard_B2s \
