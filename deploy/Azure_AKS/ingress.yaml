@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/ingress.class: addon-http-application-routing
 spec:
   rules:
-    - host: contoso.7d0ada21d5bd4ba381e9.westus.aksapp.io
+    - host: contoso.67ff9499a56f44c2b97a.westus.aksapp.io
       http:
         paths:
           - backend: # How the ingress will handle the requests
