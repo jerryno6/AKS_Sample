@@ -9,7 +9,7 @@
 - Docker
 - Account on docker hub
 
-### How to test it:
+### How to deploy it in azure cloud shell:
 ```
 git clone -b develop https://github.com/jerryno6/AKS_Sample.git
 cd /AKS_Sample/deploy/Azure_AKS
