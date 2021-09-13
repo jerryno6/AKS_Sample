@@ -1,5 +1,5 @@
 #export LOCATION=southeastasia
-export RESOURCE_GROUP=learn-061bf91f-be74-4fa1-bf3f-7e44e46dd76c
+export RESOURCE_GROUP=learn-8cd0fbb4-4525-4313-874e-bf26245d33cd
 export CLUSTER_NAME=aks-contoso-video
 
 #create resources
@@ -28,14 +28,18 @@ sleep 1m
 
 # Link your Kubernetes cluster with kubectl
 az aks get-credentials --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP
+sleep 2m
 kubectl get nodes
 
 # deploy services
 kubectl apply -f ./deployment.yaml
+sleep 2m
 kubectl get deploy contoso-website
 
 kubectl apply -f ./service.yaml
+sleep 2m
 kubectl get service contoso-website
+
 
 #need to get the url of website via below command
 : '
