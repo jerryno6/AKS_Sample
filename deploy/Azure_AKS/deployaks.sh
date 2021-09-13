@@ -1,5 +1,5 @@
 #export LOCATION=southeastasia
-export RESOURCE_GROUP=learn-87364694-e797-4635-8031-77bd3ac1feba
+export RESOURCE_GROUP=learn-061bf91f-be74-4fa1-bf3f-7e44e46dd76c
 export CLUSTER_NAME=aks-contoso-video
 
 #create resources
