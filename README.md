@@ -1,4 +1,4 @@
-# This is a Sample of deploying gRPC service on AKS
+# This is a Sample of deploying .net core app on AKS
 
 ### Platforms:
 - Linux container
@@ -9,12 +9,10 @@
 - Docker
 - Account on docker hub
 
-### How to test it:
-- Step1: Build service `AKS_Sample.Services.GreetService`
-- Step2: Run the image built in step 1 in container with docker.
-- Step3: Run `AKS_Sample.Client.Console`, it should display as below
-
+### How to deploy it in azure cloud shell:
 ```
-Greeting: Hello VuLe
-Press any key to exit...
+git clone -b develop https://github.com/jerryno6/AKS_Sample.git
+cd /AKS_Sample/deploy/Azure_AKS
+chmod +x ./deployaks.sh
+./deployaks.sh
 ```
