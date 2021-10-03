@@ -17,10 +17,12 @@ spec:
     spec:
       nodeSelector:
         kubernetes.io/os: linux
+      imagePullSecrets:
+        - name: acr-secret
       containers:
         - name: contoso-website
 #          image: mcr.microsoft.com/mslearn/samples/contoso-website        
-          image: ledangvu/ledangvu_aks_webapp
+          image: vule14registry.azurecr.io/ledangvu/ledangvu_aks_webapp:latest
           imagePullPolicy: IfNotPresent
           resources:
             requests:
@@ -51,4 +53,4 @@ spec:
       targetPort: 80
       # Optional field
       # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
-      nodePort: 30017
+      nodePort: 30018
