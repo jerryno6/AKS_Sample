@@ -6,6 +6,12 @@ metadata:
   labels:
     app: contoso-website
 spec:
+  replicas: 3
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
   selector: # Define the wrapping strategy
     matchLabels: # Match all pods with the defined labels
       app: contoso-website # Labels follow the `name: value` template
@@ -15,11 +21,6 @@ spec:
       labels:
         app: contoso-website
     spec:
-      replicas: 3
-      strategy: 
-        type: RollingUpdate
-        rollingUpdate:
-          maxUnavailable: 1
       nodeSelector:
         kubernetes.io/os: linux
       imagePullSecrets:
@@ -41,21 +42,21 @@ spec:
               name: http
 
 ---
-## nodeport.yaml
-#apiVersion: v1
-#kind: Service
-#metadata:
-#  name: contoso-website
-#  labels:
-#    app: contoso-website
-#spec:
-#  type: NodePort
-#  selector:
-#    app: contoso-website
-#  ports:
-#      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
-#    - port: 80
-#      targetPort: 80
-#      # Optional field
-#      # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
-#      nodePort: 30018
+# nodeport.yaml
+apiVersion: v1
+kind: Service
+metadata:
+ name: contoso-website
+ labels:
+   app: contoso-website
+spec:
+ type: NodePort
+ selector:
+   app: contoso-website
+ ports:
+     # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+   - port: 80
+     targetPort: 80
+     # Optional field
+     # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
+     nodePort: 30018

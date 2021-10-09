@@ -7,9 +7,9 @@ kubectl apply -f ./service.yaml
 kubectl get svc
 kubectl get pods
 
-#clean up
-kubectl delete svc contoso-website
-kubectl delete deployment contoso-website
+# Clean up
+# kubectl delete svc contoso-website
+# kubectl delete deployment contoso-website
 
 
 
