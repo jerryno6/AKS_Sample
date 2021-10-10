@@ -10,6 +10,7 @@ kubectl get pods
 # Clean up
 # kubectl delete svc contoso-website
 # kubectl delete deployment contoso-website
-
+# kubectl scale --replicas=1 deployment/contoso-website
+# kubectl get deployment
 
 
