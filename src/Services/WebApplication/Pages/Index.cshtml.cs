@@ -11,6 +11,7 @@ namespace WebApplication.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        public static Guid Id = Guid.NewGuid();
 
         public IndexModel(ILogger<IndexModel> logger)
         {
