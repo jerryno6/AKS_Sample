@@ -14,21 +14,34 @@ kubectl create secret docker-registry acr-secret \
 
 ./localdeploy.sh
 kubectl get svc
-
+kubectl get pods
 
 #  kubectl delete all -l app=contoso-website
 ```
 
-# Run these commands to run helm chart
-- We are standing at: ./AKS_Sample/deploy/localkubernetes
+# Run these commands to install helm chart
+
+### Install helm chart
+- We are standing at: ./AKS_Sample/deploy/localkubernetes/helm
 ```
-helm install akssample ./akssample
+helm install contoso-website ./contoso-website
 helm list
 
-helm get manifest akssample
+helm get manifest contoso-website
 
 kubectl get pods
-
-helm delete akssample
 ```
 
+### Upgrade helm chart
+```
+helm history drone-webapp
+
+# edit the chart then run this command
+helm upgrade drone-webapp ./drone-webapp-chart
+helm history drone-webapp
+```
+
+### clean up helm
+```
+helm delete contoso-website
+```
