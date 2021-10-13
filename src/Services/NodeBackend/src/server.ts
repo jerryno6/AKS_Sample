@@ -3,7 +3,7 @@ const app:Application = express();
 const PORT = process.env.PORT || 4000;
 
 app.get("/", (request:Request, response:Response):void => {
-  response.send("It works")
+  response.send("It works version:0.0.1")
 });
 
 app.get("/list", (request:Request, response:Response):void => {
