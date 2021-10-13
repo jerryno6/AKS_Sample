@@ -6,6 +6,11 @@ cd ./src/Clients/reactapp
 docker build -t ledangvu/ledangvu_aks_reactapp:latest .
 docker push ledangvu/ledangvu_aks_reactapp:latest
 
+# build & push for nodeapi
+cd ./src/Services/NodeBackend
+docker build -t ledangvu/ledangvu_aks_nodeapi:latest .
+docker push ledangvu/ledangvu_aks_nodeapi:latest
+
 # build & push for webapp
 cd ./src/Services/WebApplication
 docker build -t ledangvu/ledangvu_aks_webapp:latest .
