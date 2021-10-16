@@ -15,11 +15,11 @@ import { BrowserRouter as Router, Switch,
 
 // Import other React Component
 import CreateStudent from
-	"./Components/create-student.component";
+	"./AppComponents/create-student.component";
 import EditStudent from
-	"./Components/edit-student.component";
+	"./AppComponents/edit-student.component";
 import StudentList from
-	"./Components/student-list.component";
+	"./AppComponents/student-list.component";
 
 // App Component
 const App = () => {
