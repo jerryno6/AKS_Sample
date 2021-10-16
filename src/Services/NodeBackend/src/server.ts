@@ -6,7 +6,7 @@ app.get("/", (request:Request, response:Response):void => {
   response.send("It works version:0.0.1")
 });
 
-app.get("/list", (request:Request, response:Response):void => {
+app.get("/students", (request:Request, response:Response):void => {
   handleGet(response)
 });
 
