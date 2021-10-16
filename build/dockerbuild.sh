@@ -12,7 +12,7 @@ docker build -t ledangvu/ledangvu_aks_nodeapi:latest .
 docker push ledangvu/ledangvu_aks_nodeapi:latest
 
 # build & push for webapp
-cd ./src/Services/WebApplication
+cd ./src/Clients/AKS_Sample.Client.WebApplication
 docker build -t ledangvu/ledangvu_aks_webapp:latest .
 docker push ledangvu/ledangvu_aks_webapp:latest
 
