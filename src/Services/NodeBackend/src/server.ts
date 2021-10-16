@@ -20,10 +20,11 @@ function handleGet(response:Response){
     response.setHeader('content-type', 'Application/json');
     response.statusCode = 200;
     // create an array from the map 
-    var returnObject = {
-        firstName: 'testFirstName',
-        lastName: 'testLastName'
-      };
+    var returnObjects = 
+    [
+      { firstName: 'Vu',lastName: 'Le'},
+      { firstName: 'Minh',lastName: 'Hoang'}
+    ];
 
-    response.send(JSON.stringify(returnObject));
+    response.send(JSON.stringify(returnObjects));
 }
