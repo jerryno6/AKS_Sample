@@ -6,7 +6,7 @@ metadata:
   labels:
     app: contoso-website
 spec:
-  replicas: 3
+  replicas: 1
   strategy: 
     type: RollingUpdate
     rollingUpdate:
@@ -23,23 +23,34 @@ spec:
     spec:
       nodeSelector:
         kubernetes.io/os: linux
-      imagePullSecrets:
-        - name: acr-secret
+      #imagePullSecrets:
+      #  - name: acr-secret
       containers:
         - name: contoso-website
-#          image: mcr.microsoft.com/mslearn/samples/contoso-website        
-          image: vule14registry.azurecr.io/ledangvu/ledangvu_aks_webapp:latest
+          image: ledangvu/ledangvu_aks_reactapp:latest
+          #image: ledangvu/ledangvu_aks_webapp:latest
           imagePullPolicy: IfNotPresent
           resources:
             requests:
-              cpu: 100m
-              memory: 128Mi
+              cpu: 200m
+              memory: 512
             limits:
               cpu: 250m
-              memory: 256Mi
+              memory: 1024Mi
           ports:
-            - containerPort: 80
-              name: http
+            - containerPort: 3000
+        - name: contoso-nodeapi
+          image: ledangvu/ledangvu_aks_nodeapi:latest
+          imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              cpu: 200m
+              memory: 512Mi
+            limits:
+              cpu: 250m
+              memory: 1024Mi
+          ports:
+            - containerPort: 4000
 
 ---
 ## nodeport.yaml
