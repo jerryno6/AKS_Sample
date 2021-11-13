@@ -60,8 +60,9 @@ function handlePutItem(req:Request, res:Response){
 
 function handlePostItem(req:Request, res:Response){
   //Validate whether it is exists
-  let id = req.params.id;
+  let id = req.body.id;
   let candidate = students.find(student => student.id === id );
+  
   if(candidate)
   {
     students.push(req.body);
@@ -70,8 +71,14 @@ function handlePostItem(req:Request, res:Response){
   {
     // Update values
     var putObject = req.body;
-    candidate.email = putObject.email;
-    candidate.name = putObject.name;
+    
+    var newStudent = { 
+      id: id, 
+      name: putObject.name, 
+      email: putObject.email
+    };
+    console.log(newStudent);
+    students.push(newStudent);
   }
 
   // set the header and status
